@@ -6,6 +6,14 @@ if choice == 1:
     var2 = 2
     var3 = var1 + var2
     print(var3)
+    print(f"subtraction {var2-var1}")
+    print(f"multiplication {var2*var3} power {var3 ** var2}")
+    print(f"division {var3/var2} floor division {var3//var2}")
+    val = True
+    val2=True
+    val3 = False
+    print(f"and operation:{val and val2} or operations: {val or val3} not opperation {not val3}")
+
 if choice == 2 :    
     # for if else, nested if else, and elif statements also clever if.
     a = int(input("enter a number:"))
