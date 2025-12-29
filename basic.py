@@ -13,6 +13,10 @@ if choice == 1:
     val2=True
     val3 = False
     print(f"and operation:{val and val2} or operations: {val or val3} not opperation {not val3}")
+    # area of square
+    side = int(input("enter the side:"))
+    print(f"side = {side ** 2}")
+
 
 if choice == 2 :    
     # for if else, nested if else, and elif statements also clever if.
