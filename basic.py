@@ -85,4 +85,19 @@ if choice == 4:
     #list slicing : list1[starting index : ending index + 1 : step count] same as string slicing ending index is not included
     print(f"list slicing : 1. list1[1:3] = {list1[1:3]}")
     # list methods:- list.append(), list.insert(index,value), list.remove(value), list.pop(index), list.sort(), list.reverse(), list.count(value), list.extend(another list)
-    
+    list2 = [1,2,3,4,5]
+    list2.append(6)
+    list2.insert(0,0)
+    # if print(list2.remove(3)): it gives error as it returns None same for list2.sort() and list2.append()
+    list2.sort()
+    print(list2)
+    list2.reverse()
+    print(f"reversed list2: {list2}")
+    # list.remove removes first occurance of value and list.pop removes value at index and returns it
+    list2.remove(5)
+    print(f"after removing 5: {list2}") 
+
+if choice == 5:
+    #for tuples = immutable (cannot be changed) ordered collection of items built in data type
+    tuple1 = ("piyush",90,20, "Surat")
+    #tuple slicing : tuple1[starting index : ending index + 1 : step count] same as string slicing ending index is not included
