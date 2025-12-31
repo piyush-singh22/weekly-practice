@@ -1,4 +1,4 @@
-print("1.simple data variable and add operation\n 2. if condition \n 3.Strings")
+print("1.simple data variable and add operation\n 2. if condition \n 3.Strings \n 4.Lists \n 5.Tuples")
 choice = int(input("enter the number according to what you wish to look:"))
 if choice == 1:
     # For data variables  
