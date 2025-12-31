@@ -48,7 +48,7 @@ if choice == 2 :
 
     # clever if
     age = int(input("enter age:"))
-    vote = ("you can vote", "not eligible to vote ") [age < 18]
+    vote = ("you can vote", "not eligible to vote ") [age < 18] # in cleverif the first value is for false condition and second for true condition
     print(vote)
 
     sal  = int(input("enter your salary:"))
@@ -96,8 +96,29 @@ if choice == 4:
     # list.remove removes first occurance of value and list.pop removes value at index and returns it
     list2.remove(5)
     print(f"after removing 5: {list2}") 
+    # problem 1
+    movies = list(input("enter 3 movie names seperated by comma :").split(','))
+    print(f"movies list : {movies}")
+    # problem 2
+    list1 = [1,2,3,2,1]
+    list2 = list1.copy()
+    list2.reverse()
+    decision = ("no","yes")[list1 == list2]
+    print(f"palandrome check : {decision}")
+    print(f"reversed list : {list2}")
+    print(f"original list : {list1}")
 
 if choice == 5:
-    #for tuples = immutable (cannot be changed) ordered collection of items built in data type
+    #for tuples = immutable (cannot be changed) ordered collection of items built in data type () parenthesis used to define tuple
     tuple1 = ("piyush",90,20, "Surat")
+    # in tuple if we place a single value it is considered as string or int so to define single value tuple we use comma after value
+    tuple2 = (1,)
+    print(tuple2)
     #tuple slicing : tuple1[starting index : ending index + 1 : step count] same as string slicing ending index is not included
+    print(f"tuple slicing : 1. tuple1[1:3] = {tuple1[1:3]}")
+    # tuple methods:- tuple.count(value), tuple.index(value)
+    print(f"occurance of 20 in tuple1: {tuple1.count(20)} at index: {tuple1.index(20)}")
+    # problem 1
+    tup = ("c","D","A","A","B","B","A")
+    count_A = tup.count('A')
+    print(f"no of student got grade A is :{count_A}")
