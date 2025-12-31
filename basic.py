@@ -23,24 +23,29 @@ if choice == 1:
 
 
 if choice == 2 :    
-    # for if else, nested if else, and elif statements also clever if.
+    # for if else, nested if else, and elif statements also clever if conditional .
     a = int(input("enter a number:"))
     b = int(input("enter another number:"))
-    if a > b :
+    c = int(input("enter third number:"))
+    if a > b and a > c:
         print(f"True,{a} is greater then {b}")
-        if a % b != 0:
-            print(f"{a} is not divisible by {b}")
+        if a % b != 0 or a % 2 == 0:
+            print(f"{a} is not divisible by {b} but is even number")
         else:
             print(f"{a} is divisible by {b}")
-    elif a < b:
-        print(f"False,{b} is greater than {a}")
+    elif b > a and b > c:
+        print(f"False,{b} is greater than {a} and {c}")
         if b % a != 0:
             print(f"{b} is not divisible by {a}")
         else:
             print(f"{b} is divisible by {a}")
     else:
-        print("A is equaal to b")
+        print("c is greater")
     
+    # to check multiple 
+    if(a%2==0):
+        print(f"{a} is multiple of 2")
+
     # clever if
     age = int(input("enter age:"))
     vote = ("you can vote", "not eligible to vote ") [age < 18]
@@ -50,12 +55,14 @@ if choice == 2 :
     tax  = sal *(0.2,0.1)[sal<500000]
     print(f"your tax's amount to :{tax}")
 
+    
+
 if choice == 3:
     # for strings
     str1 = "om"
     str2 = 'namah'
     str3 = """Shivaya"""
-    str4 = "what's up" #  double quotes if single quote is there in string
+    str4 = input("enter a first name:") #  double quotes if single quote is there in string
     str5 = str1+str2+str3 #omnamahShivaya
     '''use of escape sequence :-
          To give a format to string we use escape sequence
@@ -67,5 +74,15 @@ if choice == 3:
     # string slicing : to access a particular character in string important for machine learning and it uses index
     # str[starting index : ending index + 1 : step count]
     print(f"\nstring slicing : 1. str5[0:2] = {str5[0:2]} 2. str5[2:] = {str5[2:]} 3. str5[:5] = {str5[:5]} 4. str5[::2] = {str5[::2]} 5. str5[-5:-1] = {str5[-5:-1]} 6. str5[::-1] = {str5[::-1]}")
-    # STring functions (str.capitalize function it only display capitalized not change original string)
-    print(f"str.endswith = {str5.endswith("aya")}, str5.capitalize = {str5.capitalize()}, str5.replace = {str5.replace("om","hariom")} ") 
+    # STring functions (str.capitalize function it only display capitalized not change original string) 
+    # (str.find function returns -1 if not found and if found then give the index value)
+    print(f"str.endswith = {str5.endswith("aya")}, str5.capitalize = {str5.capitalize()}, str5.replace = {str5.replace("om","hariom")}, str5.find = {str5.find("namah")}, str5.lower = {str5.lower()}, str5.upper = {str5.upper()} str5.count = {str5.count('a')}")
+    print(f"len of name: {len(str4)}-name is {str4}")
+    print(f"occurance of '$' in str4 : {str4.count('$')}")
+if choice == 4:
+    #for lists = mutable (can be changed) ordered collection of items built in data type
+    list1 = ["piyush",90,20, "Surat"]
+    #list slicing : list1[starting index : ending index + 1 : step count] same as string slicing ending index is not included
+    print(f"list slicing : 1. list1[1:3] = {list1[1:3]}")
+    # list methods:- list.append(), list.insert(index,value), list.remove(value), list.pop(index), list.sort(), list.reverse(), list.count(value), list.extend(another list)
+    
