@@ -1,4 +1,4 @@
-print("1.simple data variable and add operation\n 2. if condition \n 3.Strings \n 4.Lists \n 5.Tuples")
+print("1.simple data variable and add operation\n 2. if condition \n 3.Strings \n 4.Lists \n 5.Tuples \n 6.Dictionaries \n 7. Sets")
 choice = int(input("enter the number according to what you wish to look:"))
 if choice == 1:
     # For data variables  
@@ -76,14 +76,14 @@ if choice == 3:
     print(f"\nstring slicing : 1. str5[0:2] = {str5[0:2]} 2. str5[2:] = {str5[2:]} 3. str5[:5] = {str5[:5]} 4. str5[::2] = {str5[::2]} 5. str5[-5:-1] = {str5[-5:-1]} 6. str5[::-1] = {str5[::-1]}")
     # STring functions (str.capitalize function it only display capitalized not change original string) 
     # (str.find function returns -1 if not found and if found then give the index value)
-    print(f"str.endswith = {str5.endswith("aya")}, str5.capitalize = {str5.capitalize()}, str5.replace = {str5.replace("om","hariom")}, str5.find = {str5.find("namah")}, str5.lower = {str5.lower()}, str5.upper = {str5.upper()} str5.count = {str5.count('a')}")
-    print(f"len of name: {len(str4)}-name is {str4}")
-    print(f"occurance of '$' in str4 : {str4.count('$')}")
+    print(f"\n str.endswith = {str5.endswith("aya")}, str5.capitalize = {str5.capitalize()}, str5.replace = {str5.replace("om","hariom")}, str5.find = {str5.find("namah")}, str5.lower = {str5.lower()}, str5.upper = {str5.upper()} str5.count = {str5.count('a')}")
+    print(f"\n len of name: {len(str4)}-name is {str4}")
+    print(f"\n occurance of '$' in str4 : {str4.count('$')}")
 if choice == 4:
     #for lists = mutable (can be changed) ordered collection of items built in data type
     list1 = ["piyush",90,20, "Surat"]
     #list slicing : list1[starting index : ending index + 1 : step count] same as string slicing ending index is not included
-    print(f"list slicing : 1. list1[1:3] = {list1[1:3]}")
+    print(f"\n list slicing : 1. list1[1:3] = {list1[1:3]}")
     # list methods:- list.append(), list.insert(index,value), list.remove(value), list.pop(index), list.sort(), list.reverse(), list.count(value), list.extend(another list)
     list2 = [1,2,3,4,5]
     list2.append(6)
@@ -92,21 +92,21 @@ if choice == 4:
     list2.sort()
     print(list2)
     list2.reverse()
-    print(f"reversed list2: {list2}")
+    print(f"\n reversed list2: {list2}")
     # list.remove removes first occurance of value and list.pop removes value at index and returns it
     list2.remove(5)
-    print(f"after removing 5: {list2}") 
+    print(f"\n after removing 5: {list2}") 
     # problem 1
     movies = list(input("enter 3 movie names seperated by comma :").split(','))
-    print(f"movies list : {movies}")
+    print(f"\n movies list : {movies}")
     # problem 2
     list1 = [1,2,3,2,1]
     list2 = list1.copy()
     list2.reverse()
     decision = ("no","yes")[list1 == list2]
-    print(f"palandrome check : {decision}")
-    print(f"reversed list : {list2}")
-    print(f"original list : {list1}")
+    print(f"\n palandrome check : {decision}")
+    print(f"\n reversed list : {list2}")
+    print(f"\n original list : {list1}")
 
 if choice == 5:
     #for tuples = immutable (cannot be changed) ordered collection of items built in data type () parenthesis used to define tuple
@@ -115,10 +115,92 @@ if choice == 5:
     tuple2 = (1,)
     print(tuple2)
     #tuple slicing : tuple1[starting index : ending index + 1 : step count] same as string slicing ending index is not included
-    print(f"tuple slicing : 1. tuple1[1:3] = {tuple1[1:3]}")
+    print(f"\n tuple slicing : 1. tuple1[1:3] = {tuple1[1:3]}")
     # tuple methods:- tuple.count(value), tuple.index(value)
-    print(f"occurance of 20 in tuple1: {tuple1.count(20)} at index: {tuple1.index(20)}")
+    print(f"\n occurance of 20 in tuple1: {tuple1.count(20)} at index: {tuple1.index(20)}")
     # problem 1
     tup = ("c","D","A","A","B","B","A")
     count_A = tup.count('A')
-    print(f"no of student got grade A is :{count_A}")
+    print(f"\n no of student got grade A is :{count_A}")
+if choice == 6:
+    # for dictionaries = unordered , mutable (can be changed) & don't allow duplicates keys also it is used to store data in key:value pair within {} curly braces AND IS BUILT in data type
+    #  dictionary methods:- dict.keys() - returns keys, dict.values() - return values, dict.items() - returns key-value pairs, dict.get(key) - , dict.update({key:value}), dict.pop(key), dict.clear()
+    # in dictionary the keys can be float, int , bool, strings, tuple and for values any data type can be used including list
+    dict = {"name":"piyush","cgpa":8.86,"marks":[98,95,90]}
+    dict["spi"] = 9.0 # to add new key value pair
+    print(f"\n dictionaries :- {dict}")
+    # nested dictionary
+    nested_dict = {"name":"piyush", "subjects": {"maths":83,"phy":90,"bio":98},"percentage":95}
+    print(f"\n to access nested dictionary value or modify it : {nested_dict["subjects"]["maths"]}")
+    print(f"\n length of dictionary : {len(nested_dict)} and length along with type casting : {len(list(nested_dict.keys()))}")
+    pairs = list(nested_dict.items())
+    print(f"\n dictionary methods dict.value():{nested_dict.values()}, accessing nested_dict through index pairs[0] : {pairs[0]}")
+    #both normal and dict.get(key)methods return value but then why needed dict.get() method because if key is not present in dictionary then it returns None instead of error
+    #thus if encounterd error the program will not stop abruptly and continue executing further statements and if used normal method it will give error and stop executing further statements
+    print(f"\n normal method : {nested_dict["name"]} and dict.get() method : {nested_dict.get("name")}")
+    nested_dict.update({"city":"Surat", "age":20})
+    print(f"\n after updating nested_dict.update() = {nested_dict}")
+    # problem 1
+    practice_question = {"table":["a piece of furniture", "list of facts and figures"], "cat":"a small animal"}
+    print(f"\n solution to practice question : {practice_question}")
+    # problem 2
+    # WAP to enter marks of 3 subjects from the user and store them in a dictionary. Start with
+    # an empty dictionary & add one by one. Use subject name as key & marks as value.
+    marks = list(input("enter marks of 3 subjects seperated by space OR comma:").split(' '))
+    empty_dict = {}
+    subjects = ['maths', 'bio', 'phy']
+    for i in range (3):
+        empty_dict[subjects[i]] = marks[i]
+    print(empty_dict)
+
+    print(f"approach taken by apnacollege :-")
+    marks = {}
+
+    x = int(input("enter phy : "))
+    marks.update({"phy" : x})
+
+    x = int(input("enter math : "))
+    marks.update({"math" : x})
+
+    x = int(input("enter chem : ") )
+    marks.update({"chem" : x})
+
+    print(marks)
+
+
+if choice == 7:
+    # for sets is unordered, mutable and each element is unique (duplicate or more than one will not be counted) and immutable(can not be changed) it can only not store dictonary and list
+    # sets is case sensitive as if there are two values 'a' and 'A' (or 'cat' and 'Cat') then both will be counted as unique values
+    set1 = {1,2,3,4,5,5,4}
+    set2 = {1,2,"piyush", True, 2.4}
+    #sets will ignore duplicate values and store only unique values as it will not count duplicate values
+    print(f"\n sets :- {set1} set2 :- {set2} length of set1 : {len(set1)} and length of set2 : {len(set2)}")
+    empty_set = set() # to define empty set
+    print(f"\n empty set : {empty_set} type of empty set : {type(empty_set)}")
+    # set methods:- set.add(value), set.remove(value), set.pop(), set.union(another set), set.intersection(another set), set.difference(another set), set.clear()
+    empty_set.add(1)
+    empty_set.add(2)
+    empty_set.add(2)
+    empty_set.add(3)
+    empty_set.add(3)
+    print(f"\n used set.add() method to add values in empty set : {empty_set}")
+    empty_set.remove(2)
+    print(f"\n used set.remove() method to remove value 2 from empty set : {empty_set}")
+    set1.clear()
+    print(f"\n used set.clear() method to clear all values from set1 : {len(set1)}")
+    print(f"\n set.pop() method removes and returns an arbitrary value from the set : popped value : {set2.pop()} and set2 after popping : {set2}")
+    # set methods union - returns a new set with all elements from both sets, intersection - returns a new set with common elements, difference - returns a new set with elements in first set but not in second
+    print(f"\n set's union method of set2 and empty_set : {set2.union(empty_set)}")
+    print(f"\n set's intersection method of set2 and empty_set : {set2.intersection(empty_set)}")
+    print(f"\n set's difference method of set2 and empty_set : {set2.difference(empty_set)}")
+    # problem 1
+    #  You are given a list of subjects for students. Assume one classroom is required for 1
+    # subject. How many classrooms are needed by all students.
+    # "python", "java", "C++", "python", "javascript",
+    # "java", "python", "java", "C++", "C"
+    classrooms = {"python", "java", "C++", "python", "javascript","java", "python", "java", "C++", "C"}
+    print(f"\n no of classrooms needed is equal to no of unique subjects : {len(classrooms)}")
+    # problem 2
+    set = {9, '9.0'} 
+    set_tup = {("float", 9.0), ("int", 9)}
+    print(f"solution :- {set} and other approach through tuples :- {set_tup}")
