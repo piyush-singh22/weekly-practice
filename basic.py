@@ -1,4 +1,4 @@
-print("1.simple data variable and add operation\n 2. if condition \n 3.Strings \n 4.Lists \n 5.Tuples \n 6.Dictionaries \n 7. Sets")
+print("1.simple data variable and add operation\n 2. if condition \n 3.Strings \n 4.Lists \n 5.Tuples \n 6.Dictionaries \n 7. Sets \n 8. Loops \n 9. Functions")
 choice = int(input("enter the number according to what you wish to look:"))
 if choice == 1:
     # For data variables  
@@ -194,7 +194,7 @@ if choice == 7:
     print(f"\n set's intersection method of set2 and empty_set : {set2.intersection(empty_set)}")
     print(f"\n set's difference method of set2 and empty_set : {set2.difference(empty_set)}")
     # problem 1
-    #  You are given a list of subjects for students. Assume one classroom is required for 1
+    #  You are given a list of subjects for     students. Assume one classroom is required for 1
     # subject. How many classrooms are needed by all students.
     # "python", "java", "C++", "python", "javascript",
     # "java", "python", "java", "C++", "C"
@@ -203,4 +203,59 @@ if choice == 7:
     # problem 2
     set = {9, '9.0'} 
     set_tup = {("float", 9.0), ("int", 9)}
-    print(f"solution :- {set} and other approach through tuples :- {set_tup}")
+    print(f"solution :- {set} and other approach through tuples :- {set_tup }")
+
+if choice == 8:
+    # for loops 
+    # there should not be any infinite loop 
+    print(f"solution :")
+    i=1
+    while i<101:
+        print(i)
+        i += 1
+    while i>1:
+        print(i)
+        i-=1    
+    a = int(input("enter a number for multiplication"))
+    while i<11:
+        print(f"{a} * {i} = {a*i}")
+        i+=1
+    l = [1,4,9,16,25,36,49,64,81,100]
+    i=0
+
+    while i < len(l):
+        print(l[i])
+        i+=1
+    
+    l = (1,4,9,16,25,36,49,64,81,100)
+    i=0
+    while i<len(l):
+        
+        if l[i] == 81:
+            print(f"it is at {i+1} index")
+    
+        i+=1
+    print("solution : sum of n number")
+    a = int(input("enter a number"))
+    i=0
+    sum=0
+    while i<=a:
+        sum+=i
+        i+=1
+    print(f"value of sum:{sum}")
+    print("solution : factorial")
+    a = int(input("enter a number"))
+    i=0
+    fact=0
+    while i<=a:
+        sum*=i
+        i+=1
+    print(f"value of sum:{fact}")
+
+if choice == 9 :
+    #function is block of code it is used to decrease the code redundancy and increase the reusability of code and it is defined by def keyword
+    def add(a,b):
+        sum = a+b
+        return sum
+    a = add(5,8)
+    print(a)
